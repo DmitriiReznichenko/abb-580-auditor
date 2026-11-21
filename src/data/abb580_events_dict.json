@@ -1,0 +1,1145 @@
+{
+ "meta": {
+  "description": "ABB ACH580 fault, warning and pure event codes (official names, short cause summary).",
+  "source": "ACH580 firmware manual, Fault tracing chapter (Warning messages + Fault messages tables)",
+  "generated": "2026-11-20",
+  "count": 227
+ },
+ "events": {
+  "0x1080": {
+   "kind": "fault",
+   "name": "Backup/Restore timeout",
+   "description": "Control panel or PC tool has failed to communicate with the drive when backup was being made or restored."
+  },
+  "0x1081": {
+   "kind": "fault",
+   "name": "Rating ID fault",
+   "description": "Drive software has not been able to read the rating ID of the drive."
+  },
+  "0x2281": {
+   "kind": "fault",
+   "name": "Calibration",
+   "description": "Measured offset of output phase current measurement or difference between output phase U2 and W2 current measurement is too great (the values are updated during current calibration)."
+  },
+  "0x2310": {
+   "kind": "fault",
+   "name": "Overcurrent",
+   "description": "Output current has exceeded internal fault limit. In addition to an actual overcurrent situation, this fault may also be caused by an earth fault or supply phase loss."
+  },
+  "0x2330": {
+   "kind": "fault",
+   "name": "Earth leakage",
+   "description": "Drive has detected load unbalance typically due to earth fault in motor or motor cable."
+  },
+  "0x2340": {
+   "kind": "fault",
+   "name": "Short circuit",
+   "description": "Short-circuit in motor cable(s) or motor."
+  },
+  "0x2381": {
+   "kind": "fault",
+   "name": "IGBT overload",
+   "description": "Excessive IGBT junction to case temperature. This fault protects the IGBT(s) and can be activated by a short circuit in the motor cable."
+  },
+  "0x3130": {
+   "kind": "fault",
+   "name": "Input phase loss",
+   "description": "Intermediate circuit DC voltage is oscillating due to missing input power line phase or blown fuse."
+  },
+  "0x3181": {
+   "kind": "fault",
+   "name": "Wiring or earth fault",
+   "description": "Incorrect input power and motor cable connection (ie. input power cable is connected to drive motor connection)."
+  },
+  "0x3210": {
+   "kind": "fault",
+   "name": "DC link overvoltage",
+   "description": "Excessive intermediate circuit DC voltage."
+  },
+  "0x3220": {
+   "kind": "fault",
+   "name": "DC link undervoltage",
+   "description": "Intermediate circuit DC voltage is not sufficient because of a missing supply phase, blown fuse or fault in the rectifier bridge."
+  },
+  "0x3381": {
+   "kind": "fault",
+   "name": "Output phase loss",
+   "description": "Motor circuit fault due to missing motor connection (all three phases are not connected)."
+  },
+  "0x3385": {
+   "kind": "fault",
+   "name": "Autophasing",
+   "description": "Autophasing routine (see section Autophasing on page 196) has failed."
+  },
+  "0x4110": {
+   "kind": "fault",
+   "name": "Control board temperature",
+   "description": "Control board temperature is too high."
+  },
+  "0x4210": {
+   "kind": "fault",
+   "name": "IGBT overtemperature",
+   "description": "Estimated drive IGBT temperature is excessive."
+  },
+  "0x4290": {
+   "kind": "fault",
+   "name": "Cooling",
+   "description": "Drive module temperature is excessive."
+  },
+  "0x42f1": {
+   "kind": "fault",
+   "name": "IGBT temperature",
+   "description": "Drive IGBT temperature is excessive."
+  },
+  "0x4310": {
+   "kind": "fault",
+   "name": "Excess temperature",
+   "description": "Power unit module temperature is excessive."
+  },
+  "0x4380": {
+   "kind": "fault",
+   "name": "Excess temperature difference",
+   "description": "High temperature difference between the IGBTs of different phases."
+  },
+  "0x4981": {
+   "kind": "fault",
+   "name": "External temperature 1",
+   "description": "Measured temperature 1 has exceeded fault limit."
+  },
+  "0x4982": {
+   "kind": "fault",
+   "name": "External temperature 2",
+   "description": "Measured temperature 2 has exceeded fault limit."
+  },
+  "0x4990": {
+   "kind": "fault",
+   "name": "CPTC-02 not found",
+   "description": "CPTC-02 extension module is not detected in option slot 2."
+  },
+  "0x4991": {
+   "kind": "fault",
+   "name": "Safe motor temperature",
+   "description": "The CPTC-02 module indicates overtemperature: • •"
+  },
+  "0x5080": {
+   "kind": "fault",
+   "name": "Fan",
+   "description": "Cooling fan feedback missing."
+  },
+  "0x5081": {
+   "kind": "fault",
+   "name": "Auxiliary fan broken",
+   "description": "An auxiliary cooling fan (connected to the fan connectors on the control unit) is stuck or disconnected."
+  },
+  "0x5089": {
+   "kind": "fault",
+   "name": "SMT circuit malfunction",
+   "description": "Fault 4991 Safe motor temperature is generated but drive STO is not activated. Note: If only one STO channel is opened, fault FA81 Safe torque off 1 or FA82 Safe torque off 2 is generated."
+  },
+  "0x5090": {
+   "kind": "fault",
+   "name": "STO hardware failure",
+   "description": "STO hardware diagnostics has detected hardware failure."
+  },
+  "0x5091": {
+   "kind": "fault",
+   "name": "Safe torque off",
+   "description": "Safe torque off function is active, ie, safety circuit signal(s) connected to connector STO is broken during start or run."
+  },
+  "0x5092": {
+   "kind": "fault",
+   "name": "PU logic error",
+   "description": "Power unit memory has cleared."
+  },
+  "0x5093": {
+   "kind": "fault",
+   "name": "Rating ID mismatch",
+   "description": "The hardware of the drive does not match the information stored in the memory. This may occur, for example, after a firmware update."
+  },
+  "0x5094": {
+   "kind": "fault",
+   "name": "Measurement circuit temperature",
+   "description": "Problem with internal temperature measurement of the drive."
+  },
+  "0x5098": {
+   "kind": "fault",
+   "name": "I/O communication loss",
+   "description": "Internal standard I/O communication failure."
+  },
+  "0x50a0": {
+   "kind": "fault",
+   "name": "Fan",
+   "description": "Cooling fan stuck or disconnected."
+  },
+  "0x5681": {
+   "kind": "fault",
+   "name": "PU communication",
+   "description": "Communication errors detected between the drive control unit and the power unit."
+  },
+  "0x5682": {
+   "kind": "fault",
+   "name": "Power unit lost",
+   "description": "Connection between the drive control unit and the power unit is lost."
+  },
+  "0x5691": {
+   "kind": "fault",
+   "name": "Measurement circuit ADC",
+   "description": "Measurement circuit fault."
+  },
+  "0x5692": {
+   "kind": "fault",
+   "name": "PU board powerfail",
+   "description": "Power unit power supply failure."
+  },
+  "0x5693": {
+   "kind": "fault",
+   "name": "Measurement circuit DFF",
+   "description": "Measurement circuit fault."
+  },
+  "0x5697": {
+   "kind": "fault",
+   "name": "Charging feedback",
+   "description": "Charging feedback signal missing."
+  },
+  "0x5698": {
+   "kind": "fault",
+   "name": "Unknown PU fault",
+   "description": "The power unit logic has generated a fault which is not known by the software."
+  },
+  "0x5ea2": {
+   "kind": "fault",
+   "name": "Charging circuit failure",
+   "description": "Charging circuit is non-operational."
+  },
+  "0x6181": {
+   "kind": "fault",
+   "name": "FPGA version incompatible",
+   "description": "Firmware and FPGA versions are incompatible."
+  },
+  "0x6200": {
+   "kind": "fault",
+   "name": "Checksum mismatch",
+   "description": "The calculated parameter checksum does not match any enabled reference checksum."
+  },
+  "0x6306": {
+   "kind": "fault",
+   "name": "FBA A mapping file",
+   "description": "Fieldbus adapter A mapping file read error."
+  },
+  "0x6481": {
+   "kind": "fault",
+   "name": "Task overload",
+   "description": "Internal fault."
+  },
+  "0x6487": {
+   "kind": "fault",
+   "name": "Stack overflow",
+   "description": "Internal fault."
+  },
+  "0x64a1": {
+   "kind": "fault",
+   "name": "Internal file load",
+   "description": "File read error."
+  },
+  "0x64a4": {
+   "kind": "fault",
+   "name": "Rating ID fault",
+   "description": "Rating ID load error."
+  },
+  "0x64a6": {
+   "kind": "fault",
+   "name": "Adaptive program",
+   "description": "Error running the adaptive program."
+  },
+  "0x64b1": {
+   "kind": "fault",
+   "name": "Internal SSW fault",
+   "description": "Internal fault."
+  },
+  "0x64b2": {
+   "kind": "fault",
+   "name": "User set fault",
+   "description": "Loading of user parameter set failed because • • •"
+  },
+  "0x64b3": {
+   "kind": "fault",
+   "name": "Macro parameterization error",
+   "description": "Loading of macro parameter set failed."
+  },
+  "0x64e1": {
+   "kind": "fault",
+   "name": "Kernel overload",
+   "description": "Operating system error."
+  },
+  "0x64ff": {
+   "kind": "fault",
+   "name": "Fault reset",
+   "description": "A fault has been reset from the control panel, Drive composer PC tool, fieldbus or I/O."
+  },
+  "0x6581": {
+   "kind": "fault",
+   "name": "Parameter system",
+   "description": "Parameter load or save failed."
+  },
+  "0x6591": {
+   "kind": "fault",
+   "name": "Backup/Restore timeout",
+   "description": "During backup creating or restoring operation a control panel or PC tool has failed to communicate with the drive as part this operation."
+  },
+  "0x65a1": {
+   "kind": "fault",
+   "name": "FBA A parameter conflict",
+   "description": "The drive does not have a functionality requested by PLC, or requested functionality has not been activated."
+  },
+  "0x6681": {
+   "kind": "fault",
+   "name": "EFB comm loss",
+   "description": "Communication break in embedded fieldbus (EFB) communication."
+  },
+  "0x6682": {
+   "kind": "fault",
+   "name": "EFB config file",
+   "description": "Embedded fieldbus (EFB) configuration file could not be read."
+  },
+  "0x6683": {
+   "kind": "fault",
+   "name": "EFB invalid parameterization",
+   "description": "Embedded fieldbus (EFB) parameter settings inconsistent or not compatible with selected protocol."
+  },
+  "0x6684": {
+   "kind": "fault",
+   "name": "EFB load fault",
+   "description": "Embedded fieldbus (EFB) protocol firmware could not be loaded. Version mismatch between EFB protocol firmware and drive firmware."
+  },
+  "0x6685": {
+   "kind": "fault",
+   "name": "EFB fault 2",
+   "description": "Fault reserved for the EFB protocol application."
+  },
+  "0x6686": {
+   "kind": "fault",
+   "name": "EFB fault 3",
+   "description": "Fault reserved for the EFB protocol application."
+  },
+  "0x6882": {
+   "kind": "fault",
+   "name": "Text 32-bit table overflow",
+   "description": "Internal fault."
+  },
+  "0x6885": {
+   "kind": "fault",
+   "name": "Text file overflow",
+   "description": "Internal fault."
+  },
+  "0x6e21": {
+   "kind": "fault",
+   "name": "Macro parameterization error",
+   "description": "A macro file has a parameter defined in such a way that it cannot be written."
+  },
+  "0x7081": {
+   "kind": "fault",
+   "name": "Control panel loss",
+   "description": "Control panel or PC tool selected as active control location for drive has ceased communicating."
+  },
+  "0x7085": {
+   "kind": "fault",
+   "name": "Incompatible option module",
+   "description": "Fieldbus option module not supported."
+  },
+  "0x7086": {
+   "kind": "fault",
+   "name": "AI Overvoltage",
+   "description": "An overvoltage has been detected on an analog input. The analog input has temporarily been changed to voltage mode and will be changed back to current mode when the AI signal level is back within..."
+  },
+  "0x7100": {
+   "kind": "fault",
+   "name": "Excitation current",
+   "description": "Excitation current feedback low or missing"
+  },
+  "0x7121": {
+   "kind": "fault",
+   "name": "Motor stall",
+   "description": "Motor is operating in stall region because of, for example, excessive load or insufficient motor power."
+  },
+  "0x7122": {
+   "kind": "fault",
+   "name": "Motor overload",
+   "description": "Motor current is too high."
+  },
+  "0x7181": {
+   "kind": "fault",
+   "name": "Brake resistor",
+   "description": "Brake resistor broken or not connected."
+  },
+  "0x7183": {
+   "kind": "fault",
+   "name": "BR excess temperature",
+   "description": "Brake resistor temperature has exceeded fault limit defined by parameter 43.11 Brake resistor fault limit."
+  },
+  "0x7184": {
+   "kind": "fault",
+   "name": "Brake resistor wiring",
+   "description": "Brake resistor short circuit or brake chopper control fault."
+  },
+  "0x7191": {
+   "kind": "fault",
+   "name": "BC short circuit",
+   "description": "Short circuit in brake chopper IGBT."
+  },
+  "0x7192": {
+   "kind": "fault",
+   "name": "BC IGBT excess temperature",
+   "description": "Brake chopper IGBT temperature has exceeded internal fault limit."
+  },
+  "0x7310": {
+   "kind": "fault",
+   "name": "Overspeed",
+   "description": "Motor is turning faster than highest allowed speed due to incorrectly set minimum/maximum speed, insufficient braking torque or changes in load when using torque reference."
+  },
+  "0x73b0": {
+   "kind": "fault",
+   "name": "Emergency ramp failed",
+   "description": "Emergency stop did not finish within expected time."
+  },
+  "0x73f0": {
+   "kind": "fault",
+   "name": "Overfrequency",
+   "description": "Maximum allowed output frequency exceeded."
+  },
+  "0x7510": {
+   "kind": "fault",
+   "name": "FBA A communication",
+   "description": "Cyclical communication between drive and fieldbus adapter module A or between PLC and fieldbus adapter module A is lost."
+  },
+  "0x7580": {
+   "kind": "fault",
+   "name": "INU-LSU comm loss",
+   "description": "DDCS communication between the inverter unit and the supply unit is lost."
+  },
+  "0x7583": {
+   "kind": "fault",
+   "name": "Line side unit faulted",
+   "description": "The supply unit connected to the inverter unit has generated a fault."
+  },
+  "0x7584": {
+   "kind": "fault",
+   "name": "LSU charge failed",
+   "description": "The supply unit was not ready (ie. the main contactor/breaker could not be closed) within expected time."
+  },
+  "0x8001": {
+   "kind": "fault",
+   "name": "ULC underload fault",
+   "description": "User load curve: Signal has been too long under the underload curve."
+  },
+  "0x8002": {
+   "kind": "fault",
+   "name": "ULC overload fault",
+   "description": "User load curve: Signal has been too long over the overload curve."
+  },
+  "0x80a0": {
+   "kind": "fault",
+   "name": "AI supervision",
+   "description": "An analog signal is outside the limits specified for the analog input."
+  },
+  "0x80b0": {
+   "kind": "fault",
+   "name": "Signal supervision 1",
+   "description": "Fault generated by the signal supervision function 1."
+  },
+  "0x80b1": {
+   "kind": "fault",
+   "name": "Signal supervision 2",
+   "description": "Fault generated by the signal supervision function 2."
+  },
+  "0x80b2": {
+   "kind": "fault",
+   "name": "Signal supervision 3",
+   "description": "Fault generated by the signal supervision function 3."
+  },
+  "0x80b3": {
+   "kind": "fault",
+   "name": "Signal supervision 4",
+   "description": "Fault generated by the signal supervision function 4."
+  },
+  "0x80b4": {
+   "kind": "fault",
+   "name": "Signal supervision 5",
+   "description": "Fault generated by the signal supervision function 5."
+  },
+  "0x80b5": {
+   "kind": "fault",
+   "name": "Signal supervision 6",
+   "description": "Fault generated by the signal supervision function 6."
+  },
+  "0x9081": {
+   "kind": "fault",
+   "name": "External fault 1",
+   "description": "Fault in external device 1."
+  },
+  "0x9082": {
+   "kind": "fault",
+   "name": "External fault 2",
+   "description": "Fault in external device 2."
+  },
+  "0x9083": {
+   "kind": "fault",
+   "name": "External fault 3",
+   "description": "Fault in external device 3."
+  },
+  "0x9084": {
+   "kind": "fault",
+   "name": "External fault 4",
+   "description": "Fault in external device 4."
+  },
+  "0x9085": {
+   "kind": "fault",
+   "name": "External fault 5",
+   "description": "Fault in external device 5."
+  },
+  "0xa2b1": {
+   "kind": "warning",
+   "name": "Overcurrent",
+   "description": "Output current has exceeded internal fault limit. In addition to an actual overcurrent situation, this warning may also be caused by an earth fault or supply phase loss."
+  },
+  "0xa2b3": {
+   "kind": "warning",
+   "name": "Earth leakage",
+   "description": "Drive has detected load unbalance typically due to earth fault in motor or motor cable."
+  },
+  "0xa2b4": {
+   "kind": "warning",
+   "name": "Short circuit",
+   "description": "Short-circuit in motor cable(s) or motor."
+  },
+  "0xa2ba": {
+   "kind": "warning",
+   "name": "IGBT overload",
+   "description": "Excessive IGBT junction to case temperature. This warning protects the IGBT(s) and can be activated by a short circuit in the motor cable."
+  },
+  "0xa3a1": {
+   "kind": "warning",
+   "name": "DC link overvoltage",
+   "description": "Intermediate circuit DC voltage too high (when the drive is stopped)."
+  },
+  "0xa3a2": {
+   "kind": "warning",
+   "name": "DC link undervoltage",
+   "description": "Intermediate circuit DC voltage too low (when the drive is stopped)."
+  },
+  "0xa3aa": {
+   "kind": "warning",
+   "name": "DC not charged",
+   "description": "The voltage of the intermediate DC circuit has not yet risen to operating level."
+  },
+  "0xa490": {
+   "kind": "warning",
+   "name": "Incorrect temperature sensor setup",
+   "description": "Temperature cannot be supervised due to incorrect adapter setup."
+  },
+  "0xa491": {
+   "kind": "warning",
+   "name": "External temperature 1",
+   "description": "Measured temperature 1 has exceeded warning limit."
+  },
+  "0xa492": {
+   "kind": "warning",
+   "name": "External temperature 2",
+   "description": "Measured temperature 2 has exceeded warning limit."
+  },
+  "0xa4a0": {
+   "kind": "warning",
+   "name": "Control board temperature",
+   "description": "Control board temperature is too high. Temperature above warning limit"
+  },
+  "0xa4a1": {
+   "kind": "warning",
+   "name": "IGBT overtemperature",
+   "description": "Estimated drive IGBT temperature is excessive."
+  },
+  "0xa4a9": {
+   "kind": "warning",
+   "name": "Cooling",
+   "description": "Drive module temperature is excessive."
+  },
+  "0xa4b0": {
+   "kind": "warning",
+   "name": "Excess temperature",
+   "description": "Power unit module temperature is excessive."
+  },
+  "0xa4b1": {
+   "kind": "warning",
+   "name": "Excess temperature difference",
+   "description": "High temperature difference between the IGBTs of different phases."
+  },
+  "0xa4f6": {
+   "kind": "warning",
+   "name": "IGBT temperature",
+   "description": "Drive IGBT temperature is excessive."
+  },
+  "0xa581": {
+   "kind": "warning",
+   "name": "Fan",
+   "description": "Cooling fan feedback missing."
+  },
+  "0xa582": {
+   "kind": "warning",
+   "name": "Auxiliary fan missing",
+   "description": "An auxiliary cooling fan (IP55 internal fan) is stuck or disconnected."
+  },
+  "0xa5a0": {
+   "kind": "warning",
+   "name": "Safe torque off",
+   "description": "Safe torque off function is active, ie, safety circuit signal(s) connected to connector STO is lost."
+  },
+  "0xa5ea": {
+   "kind": "warning",
+   "name": "Measurement circuit temperature",
+   "description": "Problem with internal temperature measurement of the drive. Frames R1…R5"
+  },
+  "0xa5eb": {
+   "kind": "warning",
+   "name": "PU board powerfail",
+   "description": "Power unit power supply failure."
+  },
+  "0xa5ed": {
+   "kind": "warning",
+   "name": "Measurement circuit ADC",
+   "description": "Measurement circuit fault."
+  },
+  "0xa5ee": {
+   "kind": "warning",
+   "name": "Measurement circuit DFF",
+   "description": "Measurement circuit fault."
+  },
+  "0xa5ef": {
+   "kind": "warning",
+   "name": "PU state feedback",
+   "description": "State feedback from output phases does not match control signals."
+  },
+  "0xa5f0": {
+   "kind": "warning",
+   "name": "Charging feedback",
+   "description": "Charging feedback signal missing."
+  },
+  "0xa682": {
+   "kind": "warning",
+   "name": "Flash erase speed exceeded",
+   "description": "The flash memory (in the memory unit) has been erased too frequently, compromising the lifetime of the memory."
+  },
+  "0xa686": {
+   "kind": "warning",
+   "name": "Checksum mismatch",
+   "description": "The calculated parameter checksum does not match any enabled reference checksum."
+  },
+  "0xa687": {
+   "kind": "warning",
+   "name": "Checksum configuration",
+   "description": "An action has been defined for a parameter checksum mismatch but the feature has not been configured."
+  },
+  "0xa6a4": {
+   "kind": "warning",
+   "name": "Motor nominal value",
+   "description": "The motor parameters are set incorrectly. The drive is not dimensioned correctly."
+  },
+  "0xa6a5": {
+   "kind": "warning",
+   "name": "No motor data",
+   "description": "Parameters in group 99 have not been set."
+  },
+  "0xa6a6": {
+   "kind": "warning",
+   "name": "Voltage category unselected",
+   "description": "The voltage category has not been defined."
+  },
+  "0xa6a7": {
+   "kind": "warning",
+   "name": "System time not set",
+   "description": "System time is not set. Timed functions cannot be used and fault log dates are not correct."
+  },
+  "0xa6b0": {
+   "kind": "warning",
+   "name": "User lock is open",
+   "description": "The user lock is open, ie, user lock configuration parameters 96.100…96.102 are visible."
+  },
+  "0xa6b1": {
+   "kind": "warning",
+   "name": "User pass code not confirmed",
+   "description": "A new user pass code has been entered in parameter 96.100 but not confirmed in 96.101."
+  },
+  "0xa6d1": {
+   "kind": "warning",
+   "name": "FBA A parameter conflict",
+   "description": "The drive does not have a functionality requested by a PLC, or requested functionality has not been activated."
+  },
+  "0xa6e5": {
+   "kind": "warning",
+   "name": "AI parametrization",
+   "description": "The current/voltage hardware setting of an analog input does not correspond to parameter settings."
+  },
+  "0xa6e6": {
+   "kind": "warning",
+   "name": "ULC configuration",
+   "description": "User load curve configuration error."
+  },
+  "0xa6e7": {
+   "kind": "warning",
+   "name": "IPC configuration warning",
+   "description": "IPC configuration error."
+  },
+  "0xa6e8": {
+   "kind": "warning",
+   "name": "IPC version mismatch",
+   "description": "The master and follower(s) do not have the same IPC version and will not run in IPC mode."
+  },
+  "0xa780": {
+   "kind": "warning",
+   "name": "Motor stall",
+   "description": "Motor is operating in stall region because of, for example, excessive load or insufficient motor power."
+  },
+  "0xa783": {
+   "kind": "warning",
+   "name": "Motor overload",
+   "description": "Motor current is too high."
+  },
+  "0xa784": {
+   "kind": "warning",
+   "name": "Motor disconnect",
+   "description": "All three output phases are disconnected from motor."
+  },
+  "0xa792": {
+   "kind": "warning",
+   "name": "Brake resistor wiring",
+   "description": "Brake resistor short circuit or brake chopper control fault. For drive frames R6 or larger."
+  },
+  "0xa793": {
+   "kind": "warning",
+   "name": "BR excess temperature",
+   "description": "Brake resistor temperature has exceeded warning limit defined by parameter 43.12 Brake resistor warning limit."
+  },
+  "0xa794": {
+   "kind": "warning",
+   "name": "BR data",
+   "description": "Brake resistor data has not been given."
+  },
+  "0xa79c": {
+   "kind": "warning",
+   "name": "BC IGBT excess temperature",
+   "description": "Brake chopper IGBT temperature has exceeded internal warning limit."
+  },
+  "0xa7ab": {
+   "kind": "warning",
+   "name": "Extension I/O configuration failure",
+   "description": "Installed extension module is not the same as configured."
+  },
+  "0xa7ac": {
+   "kind": "warning",
+   "name": "I/O module internal error",
+   "description": "Calibration data is not stored in the IO module. Analog signals are not working with full accuracy."
+  },
+  "0xa7c1": {
+   "kind": "warning",
+   "name": "FBA A communication",
+   "description": "Cyclical communication between drive and fieldbus adapter module A or between PLC and fieldbus adapter module A is lost."
+  },
+  "0xa7ce": {
+   "kind": "warning",
+   "name": "EFB comm loss",
+   "description": "Communication break in embedded fieldbus (EFB) communication."
+  },
+  "0xa7ee": {
+   "kind": "warning",
+   "name": "Panel loss",
+   "description": "Control panel or PC tool selected as active control location for drive has ceased communicating."
+  },
+  "0xa88f": {
+   "kind": "warning",
+   "name": "Cooling fan",
+   "description": "Maintenance timer limit exceeded."
+  },
+  "0xa891": {
+   "kind": "warning",
+   "name": "Limit word 1",
+   "description": "Drive operation limit is active in Parameter 30.01 Limit word 1."
+  },
+  "0xa892": {
+   "kind": "warning",
+   "name": "Torque limit word",
+   "description": "Torque controller limitation status is active in Parameter Parameter 30.02 Torque limit status."
+  },
+  "0xa8a0": {
+   "kind": "warning",
+   "name": "AI supervision",
+   "description": "An analog signal is outside the limits specified for the analog input."
+  },
+  "0xa8a1": {
+   "kind": "warning",
+   "name": "RO life warning",
+   "description": "The relay has changed states more than the recommended number of times."
+  },
+  "0xa8a2": {
+   "kind": "warning",
+   "name": "RO toggle warning",
+   "description": "The relay output is changing states faster than recommended, for example, if a fast changing frequency signal is connected to it. The relay lifetime will be exceeded shortly."
+  },
+  "0xa8b0": {
+   "kind": "warning",
+   "name": "ABB Signal supervision 1",
+   "description": "Warning generated by the signal supervision function 1."
+  },
+  "0xa8b1": {
+   "kind": "warning",
+   "name": "ABB Signal supervision 2",
+   "description": "Warning generated by the signal supervision function 2."
+  },
+  "0xa8b2": {
+   "kind": "warning",
+   "name": "ABB Signal supervision 3",
+   "description": "Warning generated by the signal supervision function 3."
+  },
+  "0xa8b3": {
+   "kind": "warning",
+   "name": "ABB Signal supervision 4",
+   "description": "Warning generated by the signal supervision function 4."
+  },
+  "0xa8b4": {
+   "kind": "warning",
+   "name": "ABB Signal supervision 5",
+   "description": "Warning generated by the signal supervision function 5."
+  },
+  "0xa8b5": {
+   "kind": "warning",
+   "name": "ABB Signal supervision 6",
+   "description": "Warning generated by the signal supervision function 6."
+  },
+  "0xa8be": {
+   "kind": "warning",
+   "name": "ULC overload warning",
+   "description": "Selected signal has exceeded the user overload curve."
+  },
+  "0xa8bf": {
+   "kind": "warning",
+   "name": "ULC underload warning",
+   "description": "Selected signal has fallen below the user underload curve."
+  },
+  "0xa981": {
+   "kind": "warning",
+   "name": "External warning 1",
+   "description": "Fault in external device 1."
+  },
+  "0xa982": {
+   "kind": "warning",
+   "name": "External warning 2",
+   "description": "Fault in external device 2."
+  },
+  "0xa983": {
+   "kind": "warning",
+   "name": "External warning 3",
+   "description": "Fault in external device 3."
+  },
+  "0xa984": {
+   "kind": "warning",
+   "name": "External warning 4",
+   "description": "Fault in external device 4."
+  },
+  "0xa985": {
+   "kind": "warning",
+   "name": "External warning 5",
+   "description": "Fault in external device 5."
+  },
+  "0xaf80": {
+   "kind": "warning",
+   "name": "INU-LSU comm loss",
+   "description": "DDCS (fiber optic) communication between converters (for example, the inverter unit and the supply unit) is lost. Note that the inverter unit will continue operating based on the status..."
+  },
+  "0xaf85": {
+   "kind": "warning",
+   "name": "Line side unit warning",
+   "description": "The supply unit (or other converter) has generated a warning."
+  },
+  "0xaf88": {
+   "kind": "warning",
+   "name": "Season configuration warning",
+   "description": "You have configured a season which starts before the previous season."
+  },
+  "0xaf90": {
+   "kind": "warning",
+   "name": "Speed controller autotuning",
+   "description": "The speed controller autotune routine did not complete successfully."
+  },
+  "0xafaa": {
+   "kind": "warning",
+   "name": "Autoreset",
+   "description": "A fault is about to be autoreset."
+  },
+  "0xafe1": {
+   "kind": "warning",
+   "name": "Emergency stop (off2)",
+   "description": "Drive has received an emergency stop (mode selection off2) command."
+  },
+  "0xafe2": {
+   "kind": "warning",
+   "name": "Emergency stop (off1 or off3)",
+   "description": "Drive has received an emergency stop (mode selection off1 or off3) command."
+  },
+  "0xafe9": {
+   "kind": "warning",
+   "name": "Start delay",
+   "description": "The start delay is active and the drive will start the motor after a predefined delay."
+  },
+  "0xafed": {
+   "kind": "warning",
+   "name": "Run permissive",
+   "description": "Run permissive is keeping the drive from running the motor."
+  },
+  "0xafee": {
+   "kind": "warning",
+   "name": "Start interlock 1",
+   "description": "Start interlock 1 is keeping the drive from starting."
+  },
+  "0xafef": {
+   "kind": "warning",
+   "name": "Start interlock 2",
+   "description": "Start interlock 2 is keeping the drive from starting."
+  },
+  "0xaff0": {
+   "kind": "warning",
+   "name": "Start interlock 3",
+   "description": "Start interlock 3 is keeping the drive from starting."
+  },
+  "0xaff1": {
+   "kind": "warning",
+   "name": "Start interlock 4",
+   "description": "Start interlock 4 is keeping the drive from starting."
+  },
+  "0xaff2": {
+   "kind": "warning",
+   "name": "Run permissive forced warning",
+   "description": "A forced DI is used as a source for parameter 20.40 Run permissive."
+  },
+  "0xaff3": {
+   "kind": "warning",
+   "name": "Start interlock forced warning",
+   "description": "One or more forced DIs is used as a source for one or more of parameters 20.41 Start interlock 1 … 20.44 Start interlock 4."
+  },
+  "0xaff5": {
+   "kind": "warning",
+   "name": "Override new start required",
+   "description": "The Safe torque off function was active and has been reset while in Override."
+  },
+  "0xaff6": {
+   "kind": "warning",
+   "name": "Identification run",
+   "description": "Motor ID run will occur at next start."
+  },
+  "0xaff8": {
+   "kind": "warning",
+   "name": "Motor heating active",
+   "description": "Pre-heating is being performed"
+  },
+  "0xaffe": {
+   "kind": "warning",
+   "name": "Override active",
+   "description": "Drive is in Override mode."
+  },
+  "0xb5a0": {
+   "kind": "pure_event",
+   "name": "STO event",
+   "description": "Safe torque off function is active, ie, safety circuit signal(s) connected to connector STO is lost."
+  },
+  "0xb5a2": {
+   "kind": "pure_event",
+   "name": "Power applied",
+   "description": "The drive was powered up or the control board was rebooted successfully."
+  },
+  "0xb681": {
+   "kind": "pure_event",
+   "name": "Hand mode selected",
+   "description": "The drive was placed in Hand mode."
+  },
+  "0xb682": {
+   "kind": "pure_event",
+   "name": "Off mode selected",
+   "description": "The drive was placed in Off mode."
+  },
+  "0xb683": {
+   "kind": "pure_event",
+   "name": "Auto mode selected",
+   "description": "The drive was placed in Auto mode."
+  },
+  "0xb686": {
+   "kind": "pure_event",
+   "name": "Checksum mismatch",
+   "description": "The calculated parameter checksum does not match any enabled reference checksum."
+  },
+  "0xb687": {
+   "kind": "pure_event",
+   "name": "Auto start command",
+   "description": "The drive received a start command while in Auto mode."
+  },
+  "0xb688": {
+   "kind": "pure_event",
+   "name": "Auto stop command",
+   "description": "The drive received a stop command while in Auto mode."
+  },
+  "0xb689": {
+   "kind": "pure_event",
+   "name": "Modulating started",
+   "description": "The drive started modulating."
+  },
+  "0xb68a": {
+   "kind": "pure_event",
+   "name": "Modulating stopped",
+   "description": "The drive stopped modulating."
+  },
+  "0xd404": {
+   "kind": "fault",
+   "name": "Running dry",
+   "description": "Dry run protection is activated."
+  },
+  "0xd405": {
+   "kind": "fault",
+   "name": "Pipe fill-timeout",
+   "description": "Soft pipe fill has reached timeout limit. The PID output is not reached the setpoint after reference ramping is ended and the timeout limit is elapsed."
+  },
+  "0xd406": {
+   "kind": "fault",
+   "name": "Maximum flow protection",
+   "description": "Actual flow is exceeded the defined fault level."
+  },
+  "0xd407": {
+   "kind": "fault",
+   "name": "Minimum flow protection",
+   "description": "Actual flow is below the defined fault level."
+  },
+  "0xd408": {
+   "kind": "fault",
+   "name": "Outlet minimum pressure",
+   "description": "The measured outlet pressure is below the defined fault limit."
+  },
+  "0xd409": {
+   "kind": "fault",
+   "name": "Outlet maximum pressure",
+   "description": "The measured outlet pressure is above the defined fault limit."
+  },
+  "0xd40a": {
+   "kind": "fault",
+   "name": "Inlet minimum pressure",
+   "description": "The measured inlet pressure is below the defined fault level."
+  },
+  "0xd40b": {
+   "kind": "fault",
+   "name": "Damper timeout",
+   "description": "Discharge air or outside air damper has timed out."
+  },
+  "0xd40d": {
+   "kind": "fault",
+   "name": "Multipump run permissive timeout",
+   "description": "The run permissive setting configured with parameter 20.40 Run permissive was not satisfied within the time set in parameter 76.64 Run permissive timeout from when the drive was commanded to start."
+  },
+  "0xd420": {
+   "kind": "fault",
+   "name": "Reverse flow detected",
+   "description": "The check valve or backflow damper is leaking, which causes the pump or fan to rotate while the drive is stopped."
+  },
+  "0xd501": {
+   "kind": "warning",
+   "name": "No more available PFC motors",
+   "description": "No more PFC motors can be started because they can be interlocked or in the Hand mode."
+  },
+  "0xd502": {
+   "kind": "warning",
+   "name": "All motors interlocked",
+   "description": "All the motors in the PFC system are interlocked."
+  },
+  "0xd503": {
+   "kind": "warning",
+   "name": "VSD controlled PFC motor interlocked",
+   "description": "The motor connected to the drive is interlocked (unavailable)."
+  },
+  "0xd504": {
+   "kind": "warning",
+   "name": "Damper timeout",
+   "description": "Discharge air or outside air damper has timed out."
+  },
+  "0xd50a": {
+   "kind": "warning",
+   "name": "Running dry",
+   "description": "Dry run protection is activated."
+  },
+  "0xd50b": {
+   "kind": "warning",
+   "name": "Pipe fill-timeout",
+   "description": "Soft pipe fill is reached the timeout limit. The PID output is not reached the setpoint after reference ramping is ended and timeout limit is elapsed."
+  },
+  "0xd50c": {
+   "kind": "warning",
+   "name": "Maximum flow protection",
+   "description": "Actual flow is exceeded the defined warning level."
+  },
+  "0xd50d": {
+   "kind": "warning",
+   "name": "Minimum flow protection",
+   "description": "Actual flow is below the defined warning level."
+  },
+  "0xd50e": {
+   "kind": "warning",
+   "name": "Outlet minimum pressure",
+   "description": "Measured outlet pressure is below the defined warning limit."
+  },
+  "0xd50f": {
+   "kind": "warning",
+   "name": "Outlet maximum pressure",
+   "description": "Measured outlet pressure is above the defined warning limit."
+  },
+  "0xd510": {
+   "kind": "warning",
+   "name": "Inlet minimum pressure",
+   "description": "Measured inlet pressure is below the defined warning level."
+  },
+  "0xd58b": {
+   "kind": "fault",
+   "name": "Gas pressure outside limits",
+   "description": "The compressor gas pressure is outside the limits."
+  },
+  "0xd590": {
+   "kind": "warning",
+   "name": "Compressor Restart delay",
+   "description": "The restart delay is active."
+  },
+  "0xd591": {
+   "kind": "warning",
+   "name": "Min. run time",
+   "description": "Compressor minimum run time."
+  },
+  "0xfa81": {
+   "kind": "fault",
+   "name": "Safe torque off 1",
+   "description": "Safe torque off function is active, that is, STO circuit 1 is broken."
+  },
+  "0xfa82": {
+   "kind": "fault",
+   "name": "Safe torque off 2",
+   "description": "Safe torque off function is active, that is, STO circuit 2 is broken."
+  },
+  "0xff61": {
+   "kind": "fault",
+   "name": "ID run",
+   "description": "Motor ID run was not completed successfully."
+  },
+  "0xff63": {
+   "kind": "fault",
+   "name": "STO diagnostics failure",
+   "description": "SW internal malfunction."
+  },
+  "0xff81": {
+   "kind": "fault",
+   "name": "FB A force trip",
+   "description": "A fault trip command has been received through fieldbus adapter A."
+  },
+  "0xff8e": {
+   "kind": "fault",
+   "name": "EFB force trip",
+   "description": "A fault trip command has been received through the embedded fieldbus interface."
+  }
+ }
+}

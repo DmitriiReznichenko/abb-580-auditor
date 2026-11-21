@@ -1,0 +1,40 @@
+# ------------------------------------------------------------------
+# SECURITY GATE: never commit real drive backups, dumps or manuals.
+# ------------------------------------------------------------------
+*.dcparamsbak
+*.dcparams
+*.pdf
+*.bin
+*.xml
+*.zip
+*.dump
+*.dump.json
+*_dump.json
+*_pdf.json
+*_bak.json
+real-data/
+dumps/
+tmp/
+scratch/
+.local-fixtures/
+
+# Dependencies / build output
+node_modules/
+dist/
+dev-dist/
+coverage/
+*.tsbuildinfo
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Editor / OS
+.DS_Store
+.idea/
+.vscode/
+*.log
+.env
+.env.*

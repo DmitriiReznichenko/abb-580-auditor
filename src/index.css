@@ -1,0 +1,153 @@
+@import "tailwindcss";
+
+/*
+ * Design system: high-contrast, sunlight-readable light theme.
+ * Near-black ink on warm off-white, saturated status colors, 48px+ targets.
+ */
+@theme {
+  --font-sans: "Roboto", "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+  --font-mono: "Roboto Mono", ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+
+  --color-paper: #f4f4f1;
+  --color-surface: #ffffff;
+  --color-ink: #0b0b0b;
+  --color-ink-2: #3d3d3a;
+  --color-line: #cfcfc8;
+  --color-line-strong: #8e8e86;
+  --color-brand: #e4002b;
+  --color-brand-dark: #b30022;
+
+  --color-pass: #0a7a33;
+  --color-pass-bg: #e3f5e9;
+  --color-fail: #c40000;
+  --color-fail-bg: #fde4e4;
+  --color-warn: #8a4b00;
+  --color-warn-bg: #fff1cc;
+  --color-info: #0b4f8a;
+  --color-info-bg: #e2eefa;
+}
+
+@layer base {
+  html {
+    -webkit-tap-highlight-color: transparent;
+    text-size-adjust: 100%;
+  }
+  body {
+    @apply bg-paper text-ink font-sans antialiased;
+    font-size: 16px;
+    line-height: 1.45;
+    overscroll-behavior-y: contain;
+  }
+  button,
+  select,
+  input,
+  textarea {
+    font: inherit;
+  }
+  :focus-visible {
+    outline: 3px solid var(--color-info);
+    outline-offset: 2px;
+  }
+}
+
+@layer components {
+  .card {
+    @apply bg-surface rounded-2xl border border-line;
+    box-shadow:
+      0 1px 0 rgb(0 0 0 / 0.04),
+      0 6px 18px -10px rgb(0 0 0 / 0.25);
+  }
+  .card-pad {
+    @apply p-4;
+  }
+  .section-title {
+    @apply text-[13px] font-bold uppercase text-ink-2;
+    letter-spacing: 0.08em;
+  }
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl px-4 font-semibold select-none;
+    min-height: 52px;
+    transition:
+      transform 0.08s ease,
+      background-color 0.15s ease,
+      box-shadow 0.15s ease;
+  }
+  .btn:active {
+    transform: scale(0.98);
+  }
+  .btn:disabled {
+    @apply opacity-45;
+    transform: none;
+  }
+  .btn-primary {
+    @apply bg-ink text-white;
+    box-shadow: 0 2px 0 #000;
+  }
+  .btn-primary:hover {
+    @apply bg-black;
+  }
+  .btn-brand {
+    @apply bg-brand text-white;
+    box-shadow: 0 2px 0 var(--color-brand-dark);
+  }
+  .btn-secondary {
+    @apply bg-surface text-ink border-2 border-ink;
+  }
+  .btn-secondary:hover {
+    @apply bg-paper;
+  }
+  .btn-danger {
+    @apply bg-surface text-fail border-2 border-fail;
+  }
+  .btn-ghost {
+    @apply bg-transparent text-ink;
+  }
+  .field {
+    @apply w-full rounded-xl border-2 border-line-strong bg-surface px-3 text-ink;
+    min-height: 52px;
+  }
+  .field:focus {
+    @apply border-ink outline-none;
+  }
+  .pill {
+    @apply inline-flex items-center rounded-full border-2 px-4 font-semibold whitespace-nowrap;
+    min-height: 48px;
+  }
+  .pill-on {
+    @apply bg-ink text-white border-ink;
+  }
+  .pill-off {
+    @apply bg-surface text-ink border-line-strong;
+  }
+  .mono {
+    @apply font-mono;
+    font-variant-numeric: tabular-nums;
+  }
+  .kv {
+    @apply flex items-baseline justify-between gap-3 py-2 border-b border-line last:border-b-0;
+  }
+  .kv dt {
+    @apply text-ink-2 text-[15px];
+  }
+  .kv dd {
+    @apply font-semibold text-right break-all;
+  }
+}
+
+.fade-in {
+  animation: fade-in 0.22s ease-out both;
+}
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.safe-bottom {
+  padding-bottom: env(safe-area-inset-bottom);
+}

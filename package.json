@@ -1,0 +1,40 @@
+{
+  "name": "abb-580-auditor",
+  "private": true,
+  "version": "1.0.0",
+  "description": "ABB 580 Field Auditor - offline-first PWA for auditing ABB ACH580 / ACQ580 / ACS580 drive parameter backups.",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit -p tsconfig.json && vite build",
+    "preview": "vite preview",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "security:check": "node scripts/security-check.mjs"
+  },
+  "dependencies": {
+    "fast-xml-parser": "^5.3.0",
+    "idb": "^8.0.3",
+    "jspdf": "^4.2.1",
+    "jspdf-autotable": "^5.0.9",
+    "jszip": "^3.10.1",
+    "pdfjs-dist": "^5.4.0",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.3.5",
+    "@types/node": "^24.0.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "@vitejs/plugin-react": "^6.0.0",
+    "fake-indexeddb": "^6.0.0",
+    "tailwindcss": "^4.3.5",
+    "typescript": "^5.9.0",
+    "vite": "^8.0.0",
+    "vite-plugin-pwa": "^2.0.0",
+    "vitest": "^5.0.0",
+    "workbox-window": "^7.4.1"
+  }
+}
